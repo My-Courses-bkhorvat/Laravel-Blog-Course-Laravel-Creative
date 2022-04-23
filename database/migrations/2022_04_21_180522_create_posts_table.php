@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->text('content');
             $table->unsignedSmallInteger('category_id');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
