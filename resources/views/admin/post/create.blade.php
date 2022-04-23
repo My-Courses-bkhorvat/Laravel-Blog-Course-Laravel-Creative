@@ -79,7 +79,16 @@
                                     @foreach($categories as $category)
                                         <option value="{{ $category->id }}"
                                             {{ $category->id == old('category_id') ? ' selected' : ''}}
-                                            >{{$category->title}}</option>
+                                        >{{$category->title}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Tags</label>
+                                <select name="tag_ids[]" class="select2" multiple="multiple" data-placeholder="Select a tags"
+                                        style="width: 100%;">
+                                    @foreach($tags as $tag)
+                                        <option {{ is_array(old('tag_ids')) && in_array($tag->id, old('tag_ids')) ? ' selected' : ''}} value="{{ $tag->id }}">{{ $tag->title }}</option>
                                     @endforeach
                                 </select>
                             </div>
