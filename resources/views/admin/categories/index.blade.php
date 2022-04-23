@@ -42,7 +42,7 @@
                                     <tr>
                                         <th>ID</th>
                                         <th>Title</th>
-                                        <th colspan="2" class="text-center">Action</th>
+                                        <th colspan="3" class="text-center">Action</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -50,9 +50,21 @@
                                         <tr>
                                             <td>{{ $category->id }}</td>
                                             <td>{{ $category->title }}</td>
-                                            <td><a href="{{ route('admin.category.show', $category->id) }}"><i class="fa-solid fas fa-eye"></i></a></td>
-                                            <td><a href="{{ route('admin.category.edit', $category->id) }}" class="text-success"><i class="fa-solid fas fa-pen"></i></a></td>
-                                         </tr>
+                                            <td><a href="{{ route('admin.category.show', $category->id) }}"><i
+                                                        class="fa-solid fas fa-eye"></i></a></td>
+                                            <td><a href="{{ route('admin.category.edit', $category->id) }}"
+                                                   class="text-success"><i class="fa-solid fas fa-pen"></i></a></td>
+                                            <td>
+                                                <form action="{{ route('admin.category.destroy', $category->id) }}"
+                                                      method="POST">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button type="submit" class="border-0 bg-transparent">
+                                                        <i class="fa-solid fas fa-trash text-danger" role="buttun"></i>
+                                                    </button>
+                                                </form>
+                                            </td>
+                                        </tr>
                                     @endforeach
                                     </tbody>
                                 </table>
