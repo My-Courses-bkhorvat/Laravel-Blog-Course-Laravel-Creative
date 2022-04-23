@@ -8,7 +8,7 @@
             <div class="container-fluid">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                        <h1 class="m-0">Categories</h1>
+                        <h1 class="m-0">{{ $category->title }}</h1>
                     </div><!-- /.col -->
                     <div class="col-sm-6">
                         <ol class="breadcrumb float-sm-right">
@@ -26,33 +26,20 @@
             <div class="container-fluid">
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
-                    <div class="col-1 mb-3">
-                        <a href="{{ route('admin.category.create') }}" class="btn btn-block btn-primary">Create</a>
-                    </div>
-                    <div class="col-12">
-
-                    </div>
-
                     <div class="col-12">
                         <div class="card">
                             <!-- /.card-header -->
                             <div class="card-body table-responsive p-0">
                                 <table class="table table-hover text-nowrap">
-                                    <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Title</th>
-                                        <th>Show</th>
-                                    </tr>
-                                    </thead>
                                     <tbody>
-                                    @foreach($categories as $category)
                                         <tr>
+                                            <td>ID</td>
                                             <td>{{ $category->id }}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>TITLE</td>
                                             <td>{{ $category->title }}</td>
-                                            <td><a href="{{ route('admin.category.show', $category->id) }}"><i class="fa-solid fas fa-eye"></i></a></td>
                                          </tr>
-                                    @endforeach
                                     </tbody>
                                 </table>
                             </div>
