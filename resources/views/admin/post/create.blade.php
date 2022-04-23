@@ -27,25 +27,49 @@
                 <!-- Small boxes (Stat box) -->
                 <div class="row">
                     <div class="col-12">
-                        <form action="{{ route('admin.post.store') }}" method="POST"">
-                            @csrf
-                            <div class="form-group w-25">
-                                <label for="title">Title</label>
-                                <input type="text" class="form-control" name="title" id="title"
-                                       placeholder="Enter title" value="{{old('title')}}">
-                                @error('title')
-                                <div class="text-danger">{{ $message }}</div>
-                                @enderror
+                        <form action="{{ route('admin.post.store') }}" method="POST" enctype="multipart/form-data">
+                        @csrf
+                        <div class="form-group w-25">
+                            <label for="title">Title</label>
+                            <input type="text" class="form-control" name="title" id="title"
+                                   placeholder="Enter title" value="{{old('title')}}">
+                            @error('title')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <div class="form-group">
+                            <textarea id="summernote" name="content">{{old('content')}}</textarea>
+                            @error('content')
+                            <div class="text-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <div class="form-group w-50">
+                            <label for="exampleInputFile">Add preview</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" name="preview_image">
+                                    <label class="custom-file-label">Add image</label>
+                                </div>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">Upload</span>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <textarea id="summernote" name="content">{{old('content')}}</textarea>
-                                @error('content')
-                                <div class="text-danger">{{ $message }}</div>
-                                @enderror
+                        </div>
+                        <div class="form-group w-50">
+                            <label for="exampleInputFile">Add image</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                    <input type="file" class="custom-file-input" name="main_image">
+                                    <label class="custom-file-label">Add image</label>
+                                </div>
+                                <div class="input-group-append">
+                                    <span class="input-group-text">Upload</span>
+                                </div>
                             </div>
-                            <div class="form-group">
-                                <input type="submit" class="btn btn-primary" value="Create">
-                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-primary" value="Create">
+                        </div>
                         </form>
 
                     </div>
