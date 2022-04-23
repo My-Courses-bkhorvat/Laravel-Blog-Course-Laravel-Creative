@@ -30,13 +30,28 @@
                         <form action="{{ route('admin.user.store') }}" method="POST" class="w-25">
                             @csrf
                             <div class="form-group">
-                                <label for="name">Title</label>
+                                <label for="name">Name</label>
                                 <input type="text" class="form-control" name="name" id="name" placeholder="Enter name">
+                                @error('name')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Enter email">
+                                @error('email')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="text" class="form-control" name="password" id="password" placeholder="Enter password">
+                                @error('password')
+                                <div class="text-danger">{{ $message }}</div>
+                                @enderror
                             </div>
                             <input type="submit" class="btn btn-primary" value="Create">
-                            @error('name')
-                                <div class="text-danger">{{ $message }}</div>
-                            @enderror
+
                         </form>
 
                     </div>
