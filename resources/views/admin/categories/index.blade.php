@@ -42,7 +42,7 @@
                                     <tr>
                                         <th>ID</th>
                                         <th>Title</th>
-                                        <th>Show</th>
+                                        <th colspan="2" class="text-center">Action</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -51,6 +51,7 @@
                                             <td>{{ $category->id }}</td>
                                             <td>{{ $category->title }}</td>
                                             <td><a href="{{ route('admin.category.show', $category->id) }}"><i class="fa-solid fas fa-eye"></i></a></td>
+                                            <td><a href="{{ route('admin.category.edit', $category->id) }}"><i class="fa-solid fas fa-pen"></i></a></td>
                                          </tr>
                                     @endforeach
                                     </tbody>
