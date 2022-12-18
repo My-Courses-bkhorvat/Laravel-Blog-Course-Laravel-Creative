@@ -7,19 +7,19 @@
     <title>Edica :: Home</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{{ asset('assets/vendors/flag-icon-css/css/flag-icon.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/vendors/font-awesome/css/all.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/vendors/aos/aos.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    <script src="{{ asset('assets/vendors/jquery/jquery.min.js') }}"></script>
-    <script src="{{ asset('assets/js/loader.js') }}"></script>
+    <link rel="stylesheet" href="{{ asset('public/assets/vendors/flag-icon-css/css/flag-icon.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/assets/vendors/font-awesome/css/all.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/assets/vendors/aos/aos.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/assets/css/style.css') }}">
+    <script src="{{ asset('public/assets/vendors/jquery/jquery.min.js') }}"></script>
+    <script src="{{ asset('public/assets/js/loader.js') }}"></script>
 </head>
 <body>
 <div class="edica-loader"></div>
 <header class="edica-header">
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="index.html"><img src="{{ asset('assets/images/logo.svg') }}" alt="Edica"></a>
+            <a class="navbar-brand" href="index.html"><img src="{{ asset('public/assets/images/logo.svg') }}" alt="Edica"></a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#edicaMainNav" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -54,8 +54,8 @@
         <div class="footer-banner" data-aos="fade-up">
             <h1 class="banner-title">Download it now.</h1>
             <div class="banner-btns-wrapper">
-                <button class="btn btn-success"> <img src="{{ asset('assets/images/apple@1x.svg') }}" alt="ios" class="mr-2"> App Store</button>
-                <button class="btn btn-success"> <img src="{{ asset('assets/images/android@1x.svg') }}" alt="android" class="mr-2"> Google Play</button>
+                <button class="btn btn-success"> <img src="{{ asset('public/assets/images/apple@1x.svg') }}" alt="ios" class="mr-2"> App Store</button>
+                <button class="btn btn-success"> <img src="{{ asset('public/assets/images/android@1x.svg') }}" alt="android" class="mr-2"> Google Play</button>
             </div>
             <p class="banner-text">Add some helper text here to explain the finer details of your <br> product or service.</p>
         </div>
@@ -66,7 +66,7 @@
         <div class="row footer-widget-area">
             <div class="col-md-3">
                 <a href="index.html" class="footer-brand-wrapper">
-                    <img src="{{ asset('assets/images/logo.svg') }}" alt="edica logo">
+                    <img src="{{ asset('public/assets/images/logo.svg') }}" alt="edica logo">
                 </a>
                 <p class="contact-details">hello@edica.com</p>
                 <p class="contact-details">+23 3000 000 00</p>
@@ -123,10 +123,10 @@
         </div>
     </div>
 </footer>
-<script src="{{ asset('assets/vendors/popper.js/popper.min.js') }}"></script>
-<script src="{{ asset('assets/vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-<script src="{{ asset('assets/vendors/aos/aos.js') }}"></script>
-<script src="{{ asset('assets/js/main.js') }}"></script>
+<script src="{{ asset('public/assets/vendors/popper.js/popper.min.js') }}"></script>
+<script src="{{ asset('public/assets/vendors/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('public/assets/vendors/aos/aos.js') }}"></script>
+<script src="{{ asset('public/assets/js/main.js') }}"></script>
 <script>
     AOS.init({
         duration: 1000
