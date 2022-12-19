@@ -7,7 +7,7 @@
             <p class="edica-blog-post-meta" data-aos="fade-up" data-aos-delay="200">Written by Richard
                 Searls• {{ $data->format('F d, Y• h:i a') }}• Featured • {{ $post->comments->count() }} Comments</p>
             <section class="blog-post-featured-img" data-aos="fade-up" data-aos-delay="300">
-                <img src="{{ url('storage/' .$post->main_image) }}" alt="featured image" class="w-100">
+                <img src="{{ url('storage/app/public/' .$post->main_image) }}" alt="featured image" class="w-100">
             </section>
             <section class="post-content">
                 <div class="row">
