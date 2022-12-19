@@ -52,7 +52,7 @@
                             @foreach($randomPosts as $post)
                                 <div class="col-md-6 blog-post" data-aos="fade-up">
                                     <div class="blog-post-thumbnail-wrapper">
-                                        <img src="{{ url('storage/' .$post->preview_image) }}" alt="blog post">
+                                        <img src="{{ url('storage/app/public/' .$post->preview_image) }}" alt="blog post">
                                     </div>
                                     <p class="blog-post-category">{{ $post->category->title }}</p>
                                     <a href="{{ route('post.show', $post->id) }}" class="blog-post-permalink">
@@ -70,7 +70,7 @@
                             @foreach($likesPosts as $post)
                                 <li class="post">
                                     <a href="{{ route('post.show', $post->id) }}" class="post-permalink media">
-                                        <img src="{{ url('storage/' .$post->preview_image) }}" alt="blog post">
+                                        <img src="{{ url('storage/app/public/' .$post->preview_image) }}" alt="blog post">
                                         <div class="media-body">
                                             <h6 class="post-title">{{ $post->title }}</h6>
                                         </div>

@@ -46,7 +46,7 @@
                             <div class="row">
                                 @foreach($relatedPosts as $relatedPost)
                                     <div class="col-md-4" data-aos="fade-right" data-aos-delay="100">
-                                        <img src="{{ url('storage/' .$relatedPost->preview_image) }}" alt="related post"
+                                        <img src="{{ url('storage/app/public/' .$relatedPost->preview_image) }}" alt="related post"
                                              class="post-thumbnail">
                                         <p class="post-category">{{ $relatedPost->category->title }}</p>
                                         <a href="{{ route('post.show', $relatedPost->id) }}"><h5
